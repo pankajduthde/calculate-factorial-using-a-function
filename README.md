@@ -1,34 +1,37 @@
-# calculate-factorial-using-a-function
-
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)  # Recursive call
-
-print(factorial(5))  # Output: 120
-
-
-
-#using the math module for calculations
-
-import math
+#  Create a Dictionary of Student Marks
+student_marks = {
+    "Alice": 85,
+    "Bob": 78,
+    "Charlie": 92,
+    "Diana": 88,
+    "Ethan": 76
+}
 
 
-num = float(input("Enter a number: "))
+name = input("Enter the student's name: ")
 
+print(f"student mark")
 
-if num > 0:
-    square_root = math.sqrt(num)
-    natural_log = math.log(num)
+if name in student_marks:
+    print(f"{name}'s marks: {student_marks[name]}")
 else:
-    square_root = "Undefined (must be >= 0)"
-    natural_log = "Undefined (must be > 0)"
-
-sine_value = math.sin(num)  # Works for all real numbers (radians)
+    
+    print(f"Student named '{name}' student not found.")
 
 
-print("\n--- Results ---")
-print(f"Square root of {num}       : {square_root}")
-print(f"Natural logarithm of {num} : {natural_log}")
-print(f"Sine of {num} radians       : {sine_value}")
+#  Demonstrate List Slicing 
+
+numbers = list(range(1, 11))
+
+
+first_five = numbers[:5]
+
+
+reversed_first_five = first_five[::-1]
+
+
+print("Original list:", numbers)
+print("First five elements:", first_five)
+print("Reversed first five elements:", reversed_first_five)
+
 
